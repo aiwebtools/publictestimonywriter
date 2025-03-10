@@ -1,6 +1,7 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
+import DisclaimerPopup from "@/components/DisclaimerPopup";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
@@ -8,14 +9,28 @@ import { Zap, MessageSquare, Shield, Users } from "lucide-react";
 
 const Index = () => {
   const videoRef = useRef<HTMLIFrameElement>(null);
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   useEffect(() => {
     document.title = "Public Testimony Writer GPT | AI Web Tools";
+    
+    // Check if user has already accepted the disclaimer
+    const hasAcceptedDisclaimer = localStorage.getItem("disclaimer-accepted") === "true";
+    if (!hasAcceptedDisclaimer) {
+      setShowDisclaimer(true);
+    }
   }, []);
+
+  const handleDisclaimerAccept = () => {
+    setShowDisclaimer(false);
+  };
 
   return (
     <div className="min-h-screen bg-cyberpunk-dark text-white">
       <Header />
+      
+      {/* Disclaimer Popup */}
+      {showDisclaimer && <DisclaimerPopup onAccept={handleDisclaimerAccept} />}
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative">
@@ -41,6 +56,26 @@ const Index = () => {
               >
                 Learn More
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News Feature Section */}
+      <section className="py-10 relative bg-cyberpunk-blue/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto glass p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4 text-center neon-glow">As Featured In</h2>
+            <div className="flex justify-center">
+              <a 
+                href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cyberpunk-blue hover:underline text-lg font-medium flex items-center"
+              >
+                <span className="mr-2">Dabbin Dad News</span>
+                <span className="text-sm text-cyberpunk-pink">- CT CBD Shop Owner's New AI Tool Makes Public Testimony Easier</span>
+              </a>
             </div>
           </div>
         </div>
