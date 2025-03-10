@@ -1,11 +1,32 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu when clicking anchor links
+  useEffect(() => {
+    const handleHashChange = () => {
+      setIsMenuOpen(false);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Also prevent body scroll when menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -53,30 +74,32 @@ const Header = () => {
       {/* Mobile Navigation Menu */}
       <div 
         className={cn(
-          "fixed inset-0 z-40 bg-cyberpunk-dark/95 glass pt-20 transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 top-[72px] z-40 bg-cyberpunk-dark/95 glass overflow-y-auto transition-transform duration-300 ease-in-out md:hidden",
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        <nav className="container mx-auto px-4 py-8 flex flex-col space-y-6">
-          <MobileNavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" onClick={toggleMenu}>
-            Public Testimony Writer GPT
-          </MobileNavLink>
-          <MobileNavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" onClick={toggleMenu}>
-            Humanized Louis Testimony Writer
-          </MobileNavLink>
-          <MobileNavLink href="https://legislatorlink.lovable.app/" onClick={toggleMenu}>
-            Contact Local Lawmakers
-          </MobileNavLink>
-          <MobileNavLink href="#faq" onClick={toggleMenu}>
-            FAQ
-          </MobileNavLink>
-          <MobileNavLink href="#disclaimer" onClick={toggleMenu}>
-            Disclaimer
-          </MobileNavLink>
-          <MobileNavLink href="https://www.aiwebtools.ai" onClick={toggleMenu}>
-            More AI Tools
-          </MobileNavLink>
-        </nav>
+        <div className="container mx-auto px-4 py-8">
+          <nav className="flex flex-col space-y-6">
+            <MobileNavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" onClick={toggleMenu}>
+              Public Testimony Writer GPT
+            </MobileNavLink>
+            <MobileNavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" onClick={toggleMenu}>
+              Humanized Louis Testimony Writer
+            </MobileNavLink>
+            <MobileNavLink href="https://legislatorlink.lovable.app/" onClick={toggleMenu}>
+              Contact Local Lawmakers
+            </MobileNavLink>
+            <MobileNavLink href="#faq" onClick={toggleMenu}>
+              FAQ
+            </MobileNavLink>
+            <MobileNavLink href="#disclaimer" onClick={toggleMenu}>
+              Disclaimer
+            </MobileNavLink>
+            <MobileNavLink href="https://www.aiwebtools.ai" onClick={toggleMenu}>
+              More AI Tools
+            </MobileNavLink>
+          </nav>
+        </div>
       </div>
     </header>
   );
