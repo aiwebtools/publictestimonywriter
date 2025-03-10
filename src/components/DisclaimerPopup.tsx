@@ -71,9 +71,18 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
           </ul>
         </div>
         
-        <Button className="cyberpunk-button w-full" onClick={handleAccept}>
-          I AGREE
-        </Button>
+        <div className="flex flex-col">
+          <Button 
+            className="relative overflow-hidden group py-4 text-lg font-bold tracking-wider bg-gradient-to-r from-cyberpunk-pink to-cyberpunk-blue rounded-md hover:shadow-lg hover:shadow-cyberpunk-blue/30 transition-all duration-300 hover:scale-105"
+            onClick={handleAccept}
+          >
+            <span className="relative z-10 inline-flex items-center">
+              <span className="animate-glow">I AGREE</span>
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyberpunk-blue to-cyberpunk-pink opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 rounded-md"></span>
+          </Button>
+          <div className="h-[2px] w-full bg-gradient-to-r from-cyberpunk-blue via-cyberpunk-cyan to-cyberpunk-pink mt-2 rounded-full"></div>
+        </div>
       </div>
     </div>
   );
