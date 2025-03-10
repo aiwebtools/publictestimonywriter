@@ -65,6 +65,7 @@ const Header = () => {
             onClick={toggleMenu}
             className="md:hidden p-2 text-white hover:text-cyberpunk-blue"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -72,35 +73,32 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div 
-        className={cn(
-          "fixed inset-0 top-[72px] z-40 bg-cyberpunk-dark/95 glass overflow-y-auto transition-transform duration-300 ease-in-out md:hidden",
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        )}
-      >
-        <div className="container mx-auto px-4 py-8">
-          <nav className="flex flex-col space-y-6">
-            <MobileNavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" onClick={toggleMenu}>
-              Public Testimony Writer GPT
-            </MobileNavLink>
-            <MobileNavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" onClick={toggleMenu}>
-              Humanized Louis Testimony Writer
-            </MobileNavLink>
-            <MobileNavLink href="https://legislatorlink.lovable.app/" onClick={toggleMenu}>
-              Contact Local Lawmakers
-            </MobileNavLink>
-            <MobileNavLink href="#faq" onClick={toggleMenu}>
-              FAQ
-            </MobileNavLink>
-            <MobileNavLink href="#disclaimer" onClick={toggleMenu}>
-              Disclaimer
-            </MobileNavLink>
-            <MobileNavLink href="https://www.aiwebtools.ai" onClick={toggleMenu}>
-              More AI Tools
-            </MobileNavLink>
-          </nav>
+      {isMenuOpen && (
+        <div className="fixed inset-x-0 top-[72px] bottom-0 z-40 bg-cyberpunk-dark/95 glass overflow-y-auto md:hidden">
+          <div className="container mx-auto px-4 py-6">
+            <nav className="flex flex-col space-y-4">
+              <MobileNavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" onClick={toggleMenu}>
+                Public Testimony Writer GPT
+              </MobileNavLink>
+              <MobileNavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" onClick={toggleMenu}>
+                Humanized Louis Testimony Writer
+              </MobileNavLink>
+              <MobileNavLink href="https://legislatorlink.lovable.app/" onClick={toggleMenu}>
+                Contact Local Lawmakers
+              </MobileNavLink>
+              <MobileNavLink href="#faq" onClick={toggleMenu}>
+                FAQ
+              </MobileNavLink>
+              <MobileNavLink href="#disclaimer" onClick={toggleMenu}>
+                Disclaimer
+              </MobileNavLink>
+              <MobileNavLink href="https://www.aiwebtools.ai" onClick={toggleMenu}>
+                More AI Tools
+              </MobileNavLink>
+            </nav>
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 };
