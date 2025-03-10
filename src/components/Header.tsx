@@ -16,8 +16,11 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-6">
+            <NavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt">
+              Public Testimony Writer GPT
+            </NavLink>
             <NavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt">
-              Humanized Alex Testimony Writer
+              Humanized Louis Testimony Writer
             </NavLink>
             <NavLink href="https://legislatorlink.lovable.app/">
               Contact Local Lawmakers

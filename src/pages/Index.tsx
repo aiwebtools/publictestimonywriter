@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
 import DisclaimerPopup from "@/components/DisclaimerPopup";
@@ -172,6 +171,7 @@ const Index = () => {
             <div>
               <h3 className="font-bold mb-4">Tools</h3>
               <a href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" className="block text-gray-300 hover:text-white">Public Testimony Writer GPT</a>
+              <a href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" className="block text-gray-300 hover:text-white">Humanized Louis Testimony Writer</a>
               <a href="https://legislatorlink.lovable.app/" className="block text-gray-300 hover:text-white">Contact Local Lawmakers</a>
             </div>
             <div>
