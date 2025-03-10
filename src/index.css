@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,9 +34,27 @@
   * {
     @apply border-border;
   }
+  
+  html {
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    text-rendering: optimizeLegibility;
+  }
+  
   body {
-    @apply bg-cyberpunk-dark text-foreground antialiased;
+    @apply bg-cyberpunk-dark text-foreground font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+  
+  code {
+    @apply font-mono text-sm;
   }
 }
 
@@ -46,6 +66,7 @@
   text-shadow: 0 0 10px rgba(69, 202, 255, 0.5),
                0 0 20px rgba(69, 202, 255, 0.3),
                0 0 30px rgba(69, 202, 255, 0.1);
+  @apply tracking-tight;
 }
 
 .cyberpunk-card {
@@ -55,5 +76,5 @@
 .cyberpunk-button {
   @apply px-6 py-3 rounded-full bg-gradient-to-r from-cyberpunk-pink to-cyberpunk-blue 
          text-white font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg 
-         hover:shadow-cyberpunk-blue/20;
+         hover:shadow-cyberpunk-blue/20 tracking-wide;
 }

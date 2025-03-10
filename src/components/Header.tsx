@@ -39,7 +39,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <Zap className="w-8 h-8 text-cyberpunk-blue animate-glow" />
             <a href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" 
-               className="text-xl font-bold neon-glow">
+               className="text-xl font-heading font-semibold tracking-tight neon-glow">
               Public Testimony Writer GPT
             </a>
           </div>
@@ -106,7 +106,7 @@ const Header = () => {
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
     href={href}
-    className="text-gray-300 hover:text-white transition-colors duration-200"
+    className="text-gray-300 hover:text-white transition-colors duration-200 font-medium tracking-wide"
   >
     {children}
   </a>
@@ -124,7 +124,7 @@ const MobileNavLink = ({
   <a
     href={href}
     onClick={onClick}
-    className="text-xl text-gray-300 hover:text-white transition-colors duration-200 py-2 border-b border-gray-700/50"
+    className="text-xl text-gray-300 hover:text-white transition-colors duration-200 py-2 border-b border-gray-700/50 font-medium tracking-wide"
   >
     {children}
   </a>
