@@ -45,16 +45,30 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
             We do not guarantee specific outcomes from testimony submissions.
           </p>
           <p>
-            Our tool was recently featured in this news article: 
-            <a 
-              href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-cyberpunk-blue hover:underline ml-1"
-            >
-              CT CBD Shop Owner's New AI Tool Makes Public Testimony Easier: A Brave New World
-            </a>
+            Our tool has been featured in news articles: 
           </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <a 
+                href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cyberpunk-blue hover:underline"
+              >
+                Dabbin Dad News - CT CBD Shop Owner's New AI Tool Makes Public Testimony Easier: A Brave New World
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.ctinsider.com/connecticut/article/chat-gpt-ai-connecticut-testimony-legislature-18690805.php" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cyberpunk-blue hover:underline"
+              >
+                CT Insider - How AI is helping people testify at the Connecticut Legislature
+              </a>
+            </li>
+          </ul>
         </div>
         
         <Button className="cyberpunk-button w-full" onClick={handleAccept}>
