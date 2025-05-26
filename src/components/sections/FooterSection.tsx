@@ -62,15 +62,17 @@ const FooterSection = () => {
               >
                 Contact Local Lawmakers
               </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start text-left h-auto py-2 px-3 text-xs bg-transparent border-cyberpunk-blue/30 text-gray-300 hover:bg-cyberpunk-blue/10 hover:text-white hover:border-cyberpunk-blue"
+                onClick={() => window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools"}
+              >
+                Write Your Own Laws
+              </Button>
             </div>
           </div>
           <div className="space-y-3">
-            <Button
-              className="cyberpunk-button w-full"
-              onClick={() => window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools"}
-            >
-              WRITE YOUR OWN LAWS
-            </Button>
             <Button
               className="cyberpunk-button w-full"
               onClick={() => window.location.href = "https://www.aiwebtools.ai"}
