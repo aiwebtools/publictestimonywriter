@@ -41,7 +41,14 @@ const Header = () => {
                 PUBLIC ACTIVISM AI TOOLS
               </h1>
               <p className="text-xs md:text-sm text-gray-300 leading-tight">
-                Presented by AiWebTools - For The People, By the People
+                Presented by{" "}
+                <span 
+                  className="text-cyberpunk-blue hover:text-cyberpunk-pink cursor-pointer transition-colors duration-200 underline"
+                  onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+                >
+                  AiWebTools
+                </span>
+                {" "}- For The People, By the People
               </p>
             </div>
             <Button
