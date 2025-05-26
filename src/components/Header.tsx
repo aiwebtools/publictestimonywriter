@@ -66,6 +66,12 @@ const Header = () => {
             >
               WRITE YOUR OWN LAWS
             </Button>
+            <Button
+              className="cyberpunk-button text-sm px-4 py-2"
+              onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+            >
+              More AI Tools
+            </Button>
             <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#disclaimer">Disclaimer</NavLink>
           </div>
@@ -129,6 +135,17 @@ const Header = () => {
                   }}
                 >
                   WRITE YOUR OWN LAWS
+                </Button>
+              </div>
+              <div className="py-2">
+                <Button
+                  className="cyberpunk-button w-full"
+                  onClick={() => {
+                    window.location.href = "https://www.aiwebtools.ai";
+                    toggleMenu();
+                  }}
+                >
+                  More AI Tools
                 </Button>
               </div>
               <MobileNavLink href="#faq" onClick={toggleMenu}>
