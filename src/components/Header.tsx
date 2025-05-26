@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
@@ -79,7 +80,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden p-2 text-white hover:text-cyberpunk-blue"
+            className="md:hidden p-2 text-white hover:text-cyberpunk-blue z-50 relative"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
           >
@@ -89,75 +90,71 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <div className="fixed inset-x-0 top-[72px] bottom-0 z-40 bg-cyberpunk-dark/95 glass overflow-y-auto md:hidden">
-          <div className="container mx-auto px-4 py-6">
-            <nav className="flex flex-col space-y-4">
-              <div className="py-2">
-                <Button
-                  className="cyberpunk-button w-full text-sm"
-                  onClick={() => {
-                    window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt";
-                    toggleMenu();
-                  }}
-                >
-                  Public Testimony Writer GPT
-                </Button>
-              </div>
-              <div className="py-2">
-                <Button
-                  className="cyberpunk-button w-full text-sm"
-                  onClick={() => {
-                    window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt";
-                    toggleMenu();
-                  }}
-                >
-                  Humanized Special Version ✨
-                </Button>
-              </div>
-              <div className="py-2">
-                <Button
-                  className="cyberpunk-button w-full text-sm"
-                  onClick={() => {
-                    window.location.href = "https://legislatorlink.lovable.app/";
-                    toggleMenu();
-                  }}
-                >
-                  Contact Local Lawmakers
-                </Button>
-              </div>
-              <div className="py-2">
-                <Button
-                  className="cyberpunk-button w-full text-sm"
-                  onClick={() => {
-                    window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools";
-                    toggleMenu();
-                  }}
-                >
-                  Write Your Own Laws
-                </Button>
-              </div>
-              <div className="py-2">
-                <Button
-                  className="cyberpunk-button w-full text-sm"
-                  onClick={() => {
-                    window.location.href = "https://www.aiwebtools.ai";
-                    toggleMenu();
-                  }}
-                >
-                  More AI Tools
-                </Button>
-              </div>
-              <MobileNavLink href="#faq" onClick={toggleMenu}>
-                FAQ
-              </MobileNavLink>
-              <MobileNavLink href="#disclaimer" onClick={toggleMenu}>
-                Disclaimer
-              </MobileNavLink>
-            </nav>
-          </div>
+      <div className={cn(
+        "fixed inset-x-0 top-0 z-40 bg-black/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out md:hidden",
+        isMenuOpen ? "translate-y-0" : "-translate-y-full"
+      )}>
+        <div className="pt-20 pb-6 px-4">
+          <nav className="flex flex-col space-y-4">
+            <Button
+              className="cyberpunk-button w-full text-sm py-3"
+              onClick={() => {
+                window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt";
+                setIsMenuOpen(false);
+              }}
+            >
+              Public Testimony Writer GPT
+            </Button>
+            
+            <Button
+              className="cyberpunk-button w-full text-sm py-3"
+              onClick={() => {
+                window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt";
+                setIsMenuOpen(false);
+              }}
+            >
+              Humanized Special Version ✨
+            </Button>
+            
+            <Button
+              className="cyberpunk-button w-full text-sm py-3"
+              onClick={() => {
+                window.location.href = "https://legislatorlink.lovable.app/";
+                setIsMenuOpen(false);
+              }}
+            >
+              Contact Local Lawmakers
+            </Button>
+            
+            <Button
+              className="cyberpunk-button w-full text-sm py-3"
+              onClick={() => {
+                window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools";
+                setIsMenuOpen(false);
+              }}
+            >
+              Write Your Own Laws
+            </Button>
+            
+            <Button
+              className="cyberpunk-button w-full text-sm py-3"
+              onClick={() => {
+                window.location.href = "https://www.aiwebtools.ai";
+                setIsMenuOpen(false);
+              }}
+            >
+              More AI Tools
+            </Button>
+            
+            <MobileNavLink href="#faq" onClick={() => setIsMenuOpen(false)}>
+              FAQ
+            </MobileNavLink>
+            <MobileNavLink href="#disclaimer" onClick={() => setIsMenuOpen(false)}>
+              Disclaimer
+            </MobileNavLink>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 };
@@ -183,7 +180,7 @@ const MobileNavLink = ({
   <a
     href={href}
     onClick={onClick}
-    className="text-xl text-gray-300 hover:text-white transition-colors duration-200 py-2 border-b border-gray-700/50 font-medium tracking-wide"
+    className="text-xl text-gray-300 hover:text-white transition-colors duration-200 py-3 border-b border-gray-700/50 font-medium tracking-wide"
   >
     {children}
   </a>
