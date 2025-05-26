@@ -83,4 +83,30 @@
   @apply px-6 py-3 rounded-full bg-gradient-to-r from-cyberpunk-pink to-cyberpunk-blue 
          text-white font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg 
          hover:shadow-cyberpunk-blue/20 tracking-wide;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.2;
+  min-height: fit-content;
+}
+
+/* Mobile-specific adjustments for cyberpunk buttons */
+@media (max-width: 768px) {
+  .cyberpunk-button {
+    @apply px-4 py-4 text-sm;
+    white-space: normal;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.3;
+    max-width: 90vw;
+  }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 480px) {
+  .cyberpunk-button {
+    @apply px-3 py-3 text-xs;
+    line-height: 1.4;
+    max-width: 85vw;
+  }
 }
