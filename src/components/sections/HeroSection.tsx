@@ -10,7 +10,9 @@ const HeroSection = () => {
             Public Testimony Writer GPT
           </h1>
           <p className="text-xl mb-8 text-gray-300">
-            Create powerful, human-like public testimonies that make an impact that make YOUR words resonate for future generations. - WE THE PEOPLE
+            Craft Powerful, Human-Centered Testimonies That Leave a Legacy.
+            Turn your ideas into impactful public statements that move hearts, influence policy, and echo for generations.
+            Your Voice. Your Words. Our Future. — WE THE PEOPLE
           </p>
           <div className="flex justify-center gap-4">
             <Button
