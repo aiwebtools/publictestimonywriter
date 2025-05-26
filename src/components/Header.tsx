@@ -43,7 +43,7 @@ const Header = () => {
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
             >
               <span className="hidden sm:inline">Public Testimony Writer GPT</span>
-              <span className="sm:hidden">Write GPT</span>
+              <span className="sm:hidden">Write Testimony</span>
             </Button>
           </div>
           
