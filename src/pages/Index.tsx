@@ -36,13 +36,16 @@ const Index = () => {
       {/* Disclaimer Popup */}
       {showDisclaimer && <DisclaimerPopup onAccept={handleDisclaimerAccept} />}
       
-      <HeroSection />
-      <VideoSection />
-      <NewsFeatureSection />
-      <FeaturesSection />
-      <FAQSection />
-      <LegalDisclaimerSection />
-      <FooterSection />
+      {/* Main content with top padding to account for fixed header */}
+      <div className="pt-24 md:pt-20">
+        <HeroSection />
+        <VideoSection />
+        <NewsFeatureSection />
+        <FeaturesSection />
+        <FAQSection />
+        <LegalDisclaimerSection />
+        <FooterSection />
+      </div>
     </div>
   );
 };
