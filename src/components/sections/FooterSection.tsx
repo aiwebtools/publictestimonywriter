@@ -52,7 +52,7 @@ const FooterSection = () => {
                 className="w-full justify-start text-left h-auto py-2 px-3 text-xs bg-transparent border-cyberpunk-blue/30 text-gray-300 hover:bg-cyberpunk-blue/10 hover:text-white hover:border-cyberpunk-blue"
                 onClick={() => window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt"}
               >
-                Humanized Louis Testimony Writer
+                Humanized Special Version ✨
               </Button>
               <Button
                 variant="outline"
