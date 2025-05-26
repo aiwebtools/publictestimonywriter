@@ -38,23 +38,28 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Zap className="w-8 h-8 text-cyberpunk-blue animate-glow" />
-            <a href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" 
-               className="text-xl font-heading font-semibold tracking-tight neon-glow">
+            <Button
+              className="cyberpunk-button text-sm px-4 py-2"
+              onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
+            >
               Public Testimony Writer GPT
-            </a>
+            </Button>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <NavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt">
-              Public Testimony Writer GPT
-            </NavLink>
-            <NavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt">
+          <div className="hidden md:flex items-center space-x-4">
+            <Button
+              className="cyberpunk-button text-sm px-4 py-2"
+              onClick={() => window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt"}
+            >
               Humanized Louis Testimony Writer
-            </NavLink>
-            <NavLink href="https://legislatorlink.lovable.app/">
+            </Button>
+            <Button
+              className="cyberpunk-button text-sm px-4 py-2"
+              onClick={() => window.location.href = "https://legislatorlink.lovable.app/"}
+            >
               Contact Local Lawmakers
-            </NavLink>
+            </Button>
             <Button
               className="cyberpunk-button text-sm px-4 py-2"
               onClick={() => window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools"}
@@ -63,7 +68,6 @@ const Header = () => {
             </Button>
             <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#disclaimer">Disclaimer</NavLink>
-            <NavLink href="https://www.aiwebtools.ai">More AI Tools</NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,15 +87,39 @@ const Header = () => {
         <div className="fixed inset-x-0 top-[72px] bottom-0 z-40 bg-cyberpunk-dark/95 glass overflow-y-auto md:hidden">
           <div className="container mx-auto px-4 py-6">
             <nav className="flex flex-col space-y-4">
-              <MobileNavLink href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" onClick={toggleMenu}>
-                Public Testimony Writer GPT
-              </MobileNavLink>
-              <MobileNavLink href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" onClick={toggleMenu}>
-                Humanized Louis Testimony Writer
-              </MobileNavLink>
-              <MobileNavLink href="https://legislatorlink.lovable.app/" onClick={toggleMenu}>
-                Contact Local Lawmakers
-              </MobileNavLink>
+              <div className="py-2">
+                <Button
+                  className="cyberpunk-button w-full"
+                  onClick={() => {
+                    window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt";
+                    toggleMenu();
+                  }}
+                >
+                  Public Testimony Writer GPT
+                </Button>
+              </div>
+              <div className="py-2">
+                <Button
+                  className="cyberpunk-button w-full"
+                  onClick={() => {
+                    window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt";
+                    toggleMenu();
+                  }}
+                >
+                  Humanized Louis Testimony Writer
+                </Button>
+              </div>
+              <div className="py-2">
+                <Button
+                  className="cyberpunk-button w-full"
+                  onClick={() => {
+                    window.location.href = "https://legislatorlink.lovable.app/";
+                    toggleMenu();
+                  }}
+                >
+                  Contact Local Lawmakers
+                </Button>
+              </div>
               <div className="py-2">
                 <Button
                   className="cyberpunk-button w-full"
@@ -108,9 +136,6 @@ const Header = () => {
               </MobileNavLink>
               <MobileNavLink href="#disclaimer" onClick={toggleMenu}>
                 Disclaimer
-              </MobileNavLink>
-              <MobileNavLink href="https://www.aiwebtools.ai" onClick={toggleMenu}>
-                More AI Tools
               </MobileNavLink>
             </nav>
           </div>
