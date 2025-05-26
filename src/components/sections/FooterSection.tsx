@@ -5,6 +5,25 @@ const FooterSection = () => {
   return (
     <footer className="glass mt-20">
       <div className="container mx-auto px-4 py-8">
+        {/* Logo Section */}
+        <div className="mb-8 text-center">
+          <div className="flex flex-col items-center">
+            <h2 className="text-xl md:text-2xl font-bold text-white neon-glow tracking-tight mb-2">
+              PUBLIC ACTIVISM AI TOOLS
+            </h2>
+            <p className="text-sm md:text-base text-gray-300 leading-tight">
+              Presented by{" "}
+              <span 
+                className="text-cyberpunk-blue hover:text-cyberpunk-pink cursor-pointer transition-colors duration-200 underline"
+                onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+              >
+                AiWebTools
+              </span>
+              {" "}- For The People, By the People
+            </p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold mb-4">Contact</h3>
