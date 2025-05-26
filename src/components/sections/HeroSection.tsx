@@ -24,7 +24,7 @@ const HeroSection = () => {
                          relative overflow-hidden group"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
             >
-              <span className="relative z-10 group-hover:text-shadow-glow">START WRITING</span>
+              <span className="relative z-10 group-hover:text-shadow-glow">WRITE YOUR PUBLIC TESTIMONY - LET YOUR VOICE BE HEARD</span>
             </Button>
             <Button
               variant="outline"
