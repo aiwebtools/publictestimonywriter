@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import DisclaimerPopup from "@/components/DisclaimerPopup";
 import HeroSection from "@/components/sections/HeroSection";
-import NewsFeatureSection from "@/components/sections/NewsFeatureSection";
 import VideoSection from "@/components/sections/VideoSection";
+import NewsFeatureSection from "@/components/sections/NewsFeatureSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import FAQSection from "@/components/sections/FAQSection";
 import LegalDisclaimerSection from "@/components/sections/LegalDisclaimerSection";
@@ -35,8 +35,8 @@ const Index = () => {
       {showDisclaimer && <DisclaimerPopup onAccept={handleDisclaimerAccept} />}
       
       <HeroSection />
-      <NewsFeatureSection />
       <VideoSection />
+      <NewsFeatureSection />
       <FeaturesSection />
       <FAQSection />
       <LegalDisclaimerSection />
