@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import DisclaimerPopup from "@/components/DisclaimerPopup";
+import StarField from "@/components/StarField";
 import HeroSection from "@/components/sections/HeroSection";
 import VideoSection from "@/components/sections/VideoSection";
 import NewsFeatureSection from "@/components/sections/NewsFeatureSection";
@@ -28,7 +29,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cyberpunk-dark text-white">
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+      <StarField />
       <Header />
       
       {/* Disclaimer Popup */}

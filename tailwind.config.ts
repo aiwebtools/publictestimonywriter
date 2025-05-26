@@ -26,7 +26,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         cyberpunk: {
-          dark: "#1A1F2C",
+          dark: "#000000", // Changed to pure black for space theme
           blue: "#1EAEDB",
           pink: "#FF1B6B",
           cyan: "#45CAFF",
