@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
@@ -41,7 +42,8 @@ const Header = () => {
               className="cyberpunk-button text-sm px-4 py-2"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
             >
-              Public Testimony Writer GPT
+              <span className="hidden sm:inline">Public Testimony Writer GPT</span>
+              <span className="sm:hidden">Write Testimony</span>
             </Button>
           </div>
           
@@ -94,7 +96,7 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <div className="py-2">
                 <Button
-                  className="cyberpunk-button w-full"
+                  className="cyberpunk-button w-full text-sm"
                   onClick={() => {
                     window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt";
                     toggleMenu();
@@ -105,7 +107,7 @@ const Header = () => {
               </div>
               <div className="py-2">
                 <Button
-                  className="cyberpunk-button w-full"
+                  className="cyberpunk-button w-full text-sm"
                   onClick={() => {
                     window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt";
                     toggleMenu();
@@ -116,7 +118,7 @@ const Header = () => {
               </div>
               <div className="py-2">
                 <Button
-                  className="cyberpunk-button w-full"
+                  className="cyberpunk-button w-full text-sm"
                   onClick={() => {
                     window.location.href = "https://legislatorlink.lovable.app/";
                     toggleMenu();
@@ -127,18 +129,18 @@ const Header = () => {
               </div>
               <div className="py-2">
                 <Button
-                  className="cyberpunk-button w-full"
+                  className="cyberpunk-button w-full text-sm"
                   onClick={() => {
                     window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools";
                     toggleMenu();
                   }}
                 >
-                  WRITE YOUR OWN LAWS
+                  Write Your Own Laws
                 </Button>
               </div>
               <div className="py-2">
                 <Button
-                  className="cyberpunk-button w-full"
+                  className="cyberpunk-button w-full text-sm"
                   onClick={() => {
                     window.location.href = "https://www.aiwebtools.ai";
                     toggleMenu();
