@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
@@ -52,7 +51,7 @@ const Header = () => {
               className="cyberpunk-button text-sm px-4 py-2"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt"}
             >
-              Humanized Louis Testimony Writer
+              Humanized Special Version ✨
             </Button>
             <Button
               className="cyberpunk-button text-sm px-4 py-2"
@@ -112,7 +111,7 @@ const Header = () => {
                     toggleMenu();
                   }}
                 >
-                  Humanized Louis Testimony Writer
+                  Humanized Special Version ✨
                 </Button>
               </div>
               <div className="py-2">
