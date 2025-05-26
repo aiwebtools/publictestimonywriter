@@ -37,7 +37,7 @@ const Index = () => {
       {showDisclaimer && <DisclaimerPopup onAccept={handleDisclaimerAccept} />}
       
       {/* Main content with increased top padding to account for fixed header */}
-      <div className="pt-32 md:pt-28">
+      <div className="pt-40 md:pt-32">
         <HeroSection />
         <VideoSection />
         <NewsFeatureSection />
