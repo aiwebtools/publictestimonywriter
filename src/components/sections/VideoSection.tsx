@@ -11,7 +11,7 @@ const VideoSection = () => {
           <iframe
             ref={videoRef}
             className="w-full aspect-video rounded-lg shadow-2xl"
-            src="https://www.youtube.com/embed/-q1oyZZFcI4?autoplay=1&mute=0&controls=1&rel=0&hd=1"
+            src="https://www.youtube.com/embed/-q1oyZZFcI4?autoplay=1&mute=0&controls=1&rel=0&hd=1&loop=1&playlist=-q1oyZZFcI4"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
