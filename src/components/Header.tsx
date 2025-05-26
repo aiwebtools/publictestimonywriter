@@ -55,6 +55,12 @@ const Header = () => {
             <NavLink href="https://legislatorlink.lovable.app/">
               Contact Local Lawmakers
             </NavLink>
+            <Button
+              className="cyberpunk-button text-sm px-4 py-2"
+              onClick={() => window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools"}
+            >
+              WRITE YOUR OWN LAWS
+            </Button>
             <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#disclaimer">Disclaimer</NavLink>
             <NavLink href="https://www.aiwebtools.ai">More AI Tools</NavLink>
@@ -86,6 +92,17 @@ const Header = () => {
               <MobileNavLink href="https://legislatorlink.lovable.app/" onClick={toggleMenu}>
                 Contact Local Lawmakers
               </MobileNavLink>
+              <div className="py-2">
+                <Button
+                  className="cyberpunk-button w-full"
+                  onClick={() => {
+                    window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools";
+                    toggleMenu();
+                  }}
+                >
+                  WRITE YOUR OWN LAWS
+                </Button>
+              </div>
               <MobileNavLink href="#faq" onClick={toggleMenu}>
                 FAQ
               </MobileNavLink>

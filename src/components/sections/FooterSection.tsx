@@ -22,7 +22,13 @@ const FooterSection = () => {
             <a href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" className="block text-gray-300 hover:text-white">Humanized Louis Testimony Writer</a>
             <a href="https://legislatorlink.lovable.app/" className="block text-gray-300 hover:text-white">Contact Local Lawmakers</a>
           </div>
-          <div>
+          <div className="space-y-3">
+            <Button
+              className="cyberpunk-button w-full"
+              onClick={() => window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools"}
+            >
+              WRITE YOUR OWN LAWS
+            </Button>
             <Button
               className="cyberpunk-button w-full"
               onClick={() => window.location.href = "https://www.aiwebtools.ai"}
