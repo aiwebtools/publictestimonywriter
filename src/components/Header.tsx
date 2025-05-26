@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -36,8 +35,15 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Zap className="w-8 h-8 text-cyberpunk-blue animate-glow" />
+          <div className="flex items-center space-x-4">
+            <div className="flex flex-col">
+              <h1 className="text-lg md:text-xl font-bold text-white neon-glow tracking-tight">
+                PUBLIC ACTIVISM AI TOOLS
+              </h1>
+              <p className="text-xs md:text-sm text-gray-300 leading-tight">
+                Presented by AiWebTools - For The People, By the People
+              </p>
+            </div>
             <Button
               className="cyberpunk-button text-xs sm:text-sm px-2 sm:px-4 py-2"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
