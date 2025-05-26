@@ -14,10 +14,17 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center gap-4">
             <Button
-              className="cyberpunk-button"
+              className="px-12 py-6 text-xl font-bold rounded-full bg-gradient-to-r from-cyberpunk-pink via-cyberpunk-blue to-cyberpunk-cyan 
+                         text-white transition-all duration-300 hover:scale-110 hover:shadow-2xl 
+                         animate-pulse shadow-lg shadow-cyberpunk-blue/30
+                         hover:shadow-cyberpunk-pink/50 hover:from-cyberpunk-cyan hover:via-cyberpunk-pink hover:to-cyberpunk-blue
+                         active:scale-95 transform-gpu backdrop-blur-sm border border-white/20
+                         before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r 
+                         before:from-cyberpunk-pink/20 before:to-cyberpunk-blue/20 before:animate-ping before:duration-1000
+                         relative overflow-hidden group"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
             >
-              Start Writing
+              <span className="relative z-10 group-hover:text-shadow-glow">START WRITING</span>
             </Button>
             <Button
               variant="outline"
