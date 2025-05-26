@@ -39,7 +39,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <Zap className="w-8 h-8 text-cyberpunk-blue animate-glow" />
             <Button
-              className="cyberpunk-button text-sm px-4 py-2"
+              className="cyberpunk-button text-xs sm:text-sm px-2 sm:px-4 py-2"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
             >
               <span className="hidden sm:inline">Public Testimony Writer GPT</span>
@@ -95,9 +95,9 @@ const Header = () => {
         isMenuOpen ? "translate-y-0" : "-translate-y-full"
       )}>
         <div className="pt-20 pb-6 px-4">
-          <nav className="flex flex-col space-y-4">
+          <nav className="flex flex-col space-y-3">
             <Button
-              className="cyberpunk-button w-full text-sm py-3"
+              className="cyberpunk-button w-full text-xs py-2 px-3"
               onClick={() => {
                 window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt";
                 setIsMenuOpen(false);
@@ -107,7 +107,7 @@ const Header = () => {
             </Button>
             
             <Button
-              className="cyberpunk-button w-full text-sm py-3"
+              className="cyberpunk-button w-full text-xs py-2 px-3"
               onClick={() => {
                 window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt";
                 setIsMenuOpen(false);
@@ -117,7 +117,7 @@ const Header = () => {
             </Button>
             
             <Button
-              className="cyberpunk-button w-full text-sm py-3"
+              className="cyberpunk-button w-full text-xs py-2 px-3"
               onClick={() => {
                 window.location.href = "https://legislatorlink.lovable.app/";
                 setIsMenuOpen(false);
@@ -127,7 +127,7 @@ const Header = () => {
             </Button>
             
             <Button
-              className="cyberpunk-button w-full text-sm py-3"
+              className="cyberpunk-button w-full text-xs py-2 px-3"
               onClick={() => {
                 window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools";
                 setIsMenuOpen(false);
@@ -137,7 +137,7 @@ const Header = () => {
             </Button>
             
             <Button
-              className="cyberpunk-button w-full text-sm py-3"
+              className="cyberpunk-button w-full text-xs py-2 px-3"
               onClick={() => {
                 window.location.href = "https://www.aiwebtools.ai";
                 setIsMenuOpen(false);
@@ -180,7 +180,7 @@ const MobileNavLink = ({
   <a
     href={href}
     onClick={onClick}
-    className="text-xl text-gray-300 hover:text-white transition-colors duration-200 py-3 border-b border-gray-700/50 font-medium tracking-wide"
+    className="text-lg text-gray-300 hover:text-white transition-colors duration-200 py-2 border-b border-gray-700/50 font-medium tracking-wide"
   >
     {children}
   </a>
