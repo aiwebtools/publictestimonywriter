@@ -37,9 +37,32 @@ const FooterSection = () => {
           </div>
           <div>
             <h3 className="font-bold mb-4">Tools</h3>
-            <a href="https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt" className="block text-gray-300 hover:text-white">Public Testimony Writer GPT</a>
-            <a href="https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt" className="block text-gray-300 hover:text-white">Humanized Louis Testimony Writer</a>
-            <a href="https://legislatorlink.lovable.app/" className="block text-gray-300 hover:text-white">Contact Local Lawmakers</a>
+            <div className="space-y-2">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start text-left h-auto py-2 px-3 text-xs bg-transparent border-cyberpunk-blue/30 text-gray-300 hover:bg-cyberpunk-blue/10 hover:text-white hover:border-cyberpunk-blue"
+                onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
+              >
+                Public Testimony Writer GPT
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start text-left h-auto py-2 px-3 text-xs bg-transparent border-cyberpunk-blue/30 text-gray-300 hover:bg-cyberpunk-blue/10 hover:text-white hover:border-cyberpunk-blue"
+                onClick={() => window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt"}
+              >
+                Humanized Louis Testimony Writer
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start text-left h-auto py-2 px-3 text-xs bg-transparent border-cyberpunk-blue/30 text-gray-300 hover:bg-cyberpunk-blue/10 hover:text-white hover:border-cyberpunk-blue"
+                onClick={() => window.location.href = "https://legislatorlink.lovable.app/"}
+              >
+                Contact Local Lawmakers
+              </Button>
+            </div>
           </div>
           <div className="space-y-3">
             <Button
