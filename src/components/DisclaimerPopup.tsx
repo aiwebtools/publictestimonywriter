@@ -16,8 +16,8 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
     setIsVisible(false);
     onAccept();
     toast({
-      title: "Divine Welcome!",
-      description: "Thank you for accepting the sacred disclaimer. May your voice be blessed.",
+      title: "Welcome!",
+      description: "Thank you for accepting the disclaimer. Your voice matters.",
     });
   };
 
@@ -33,22 +33,22 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
           <X size={28} />
         </button>
         
-        <h2 className="text-4xl font-bold mb-8 divine-neon-glow text-center">Sacred Legal Disclaimer</h2>
+        <h2 className="text-4xl font-bold mb-8 divine-neon-glow text-center">Legal Disclaimer</h2>
         
         <div className="mb-10 text-divine-silver space-y-6 max-h-[60vh] overflow-y-auto pr-4 text-lg leading-relaxed">
           <p>
-            This divine tool is designed to assist in crafting public testimonies while maintaining the authenticity of your voice and message. 
+            This tool is designed to assist in crafting public testimonies while maintaining the authenticity of your voice and message. 
             Users are responsible for reviewing and ensuring the accuracy of all content before submission.
           </p>
           <p>
-            By using this blessed tool, you acknowledge that all submitted testimonies represent your own personal views and opinions. 
+            By using this tool, you acknowledge that all submitted testimonies represent your own personal views and opinions. 
             We do not guarantee specific outcomes from testimony submissions.
           </p>
           <p className="text-divine-gold font-semibold italic text-xl text-center neon-glow">
             For informational, educational, and research purposes only.
           </p>
           <p className="text-xl font-semibold text-divine-celestial">
-            Our divine tool has been blessed and featured in sacred news articles: 
+            Our tool has been featured in news articles: 
           </p>
           <ul className="list-disc pl-8 space-y-4">
             <li>
@@ -73,14 +73,14 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
             </li>
           </ul>
           <p className="text-lg text-center">
-            By continuing with divine grace, you agree to our{" "}
+            By continuing, you agree to our{" "}
             <a 
               href="https://aiwebtools.lovable.app/disclaimers" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-divine-gold hover:divine-neon-glow transition-all duration-300 divine-hover underline font-semibold"
             >
-              Sacred Terms of Service
+              Terms of Service
             </a>
             .
           </p>
@@ -92,7 +92,7 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
             onClick={handleAccept}
           >
             <span className="relative z-10 inline-flex items-center">
-              <span className="animate-glow">I ACCEPT WITH DIVINE GRACE</span>
+              <span className="animate-glow">I ACCEPT</span>
             </span>
           </Button>
           <div className="h-1 w-full bg-gradient-to-r from-divine-celestial via-divine-gold to-divine-purple rounded-full animate-divine-gradient" />

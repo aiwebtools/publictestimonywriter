@@ -4,7 +4,7 @@ const NewsFeatureSection = () => {
     <section className="py-20 relative bg-gradient-to-r from-divine-celestial/10 via-divine-purple/5 to-divine-gold/10">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto divine-glass p-10 rounded-3xl divine-hover">
-          <h2 className="text-4xl font-bold mb-8 text-center divine-neon-glow">Blessed & Featured In Divine Media</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center divine-neon-glow">Featured In The News</h2>
           <div className="flex flex-col space-y-8">
             <a 
               href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" 

@@ -39,11 +39,11 @@ const HeroSection = () => {
                          hover:shadow-lg hover:shadow-divine-gold/30 transition-all duration-500"
               onClick={() => window.location.href = "#how-it-works"}
             >
-              Discover the Magic
+              Learn How It Works
             </Button>
           </div>
           
-          {/* Divine particles effect */}
+          {/* Particle effects */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(20)].map((_, i) => (
               <div

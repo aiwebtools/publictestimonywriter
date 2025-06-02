@@ -5,7 +5,7 @@ const FooterSection = () => {
   return (
     <footer className="divine-glass mt-32">
       <div className="container mx-auto px-4 py-16">
-        {/* Divine Logo Section */}
+        {/* Logo Section */}
         <div className="mb-16 text-center">
           <div className="flex flex-col items-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-divine-gold divine-neon-glow tracking-tight">
@@ -29,17 +29,17 @@ const FooterSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h3 className="font-bold mb-6 text-divine-gold text-xl">Divine Contact</h3>
+            <h3 className="font-bold mb-6 text-divine-gold text-xl">Contact</h3>
             <a href="tel:4758008096" className="block text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover">(475) 800-8096</a>
             <a href="mailto:Contact@ai-webtools.com" className="block text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover">Contact@ai-webtools.com</a>
           </div>
           <div className="space-y-4">
-            <h3 className="font-bold mb-6 text-divine-gold text-xl">Sacred Legal</h3>
+            <h3 className="font-bold mb-6 text-divine-gold text-xl">Legal</h3>
             <a href="https://openai.com/policies/privacy-policy" className="block text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover">Privacy Policy</a>
             <a href="https://aiwebtools.lovable.app/disclaimers" className="block text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover">Terms of Service</a>
           </div>
           <div className="space-y-4">
-            <h3 className="font-bold mb-6 text-divine-gold text-xl">Divine Tools</h3>
+            <h3 className="font-bold mb-6 text-divine-gold text-xl">AI Tools</h3>
             <div className="space-y-4">
               <Button
                 variant="outline"
@@ -80,13 +80,13 @@ const FooterSection = () => {
               className="cyberpunk-button w-full text-lg py-6"
               onClick={() => window.location.href = "https://www.aiwebtools.ai"}
             >
-              More Divine AI Tools
+              More AI Tools
             </Button>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-divine-gold/30 text-center">
           <a href="https://www.aiwebtools.ai" className="text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover">
-            © 2025 AI WEB TOOLS LLC All rights reserved. Blessed by Divine Code.
+            © 2025 AI WEB TOOLS LLC All rights reserved.
           </a>
         </div>
       </div>

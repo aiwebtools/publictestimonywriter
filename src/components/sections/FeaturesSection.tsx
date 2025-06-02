@@ -7,28 +7,28 @@ const FeaturesSection = () => {
     <section className="py-32 relative" id="how-it-works">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-20 divine-neon-glow">
-          How Divine Magic Works
+          How It Works
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <FeatureCard
             icon={<MessageSquare className="w-12 h-12 text-divine-gold animate-glow" />}
-            title="AI-Powered Divine Writing"
-            description="Advanced celestial AI technology that crafts human-like testimonies while maintaining your unique divine voice"
+            title="AI-Powered Writing"
+            description="Advanced AI technology that crafts human-like testimonies while maintaining your unique voice and perspective"
           />
           <FeatureCard
             icon={<Shield className="w-12 h-12 text-divine-purple animate-divine-pulse" />}
-            title="Ethereal Anti-Detection"
-            description="Sophisticated divine algorithms ensure your testimony passes all AI detection tools with heavenly grace"
+            title="Anti-Detection Technology"
+            description="Sophisticated algorithms ensure your testimony passes all AI detection tools while maintaining authenticity"
           />
           <FeatureCard
             icon={<Users className="w-12 h-12 text-divine-celestial animate-glow" />}
-            title="Sacred Personal Touch"
-            description="Maintains your divine tone and style while making your message more impactful and spiritually resonant"
+            title="Personal Touch"
+            description="Maintains your personal tone and style while making your message more impactful and professionally resonant"
           />
           <FeatureCard
             icon={<Zap className="w-12 h-12 text-divine-rose animate-divine-pulse" />}
-            title="Instant Divine Results"
-            description="Get your perfectly crafted divine testimony in minutes, blessed with the speed of celestial light"
+            title="Instant Results"
+            description="Get your perfectly crafted testimony in minutes with the speed and efficiency of modern AI technology"
           />
         </div>
       </div>
