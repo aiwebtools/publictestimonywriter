@@ -29,15 +29,19 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+    <div className="min-h-screen bg-divine-dark text-divine-white relative overflow-x-hidden">
       <StarField />
+      
+      {/* Divine background overlay */}
+      <div className="fixed inset-0 bg-gradient-to-br from-divine-gold/5 via-divine-purple/3 to-divine-celestial/5 pointer-events-none -z-5" />
+      
       <Header />
       
       {/* Disclaimer Popup */}
       {showDisclaimer && <DisclaimerPopup onAccept={handleDisclaimerAccept} />}
       
-      {/* Main content with increased top padding to account for fixed header */}
-      <div className="pt-40 md:pt-32">
+      {/* Main content with divine spacing */}
+      <div className="pt-48 md:pt-40 space-y-32">
         <HeroSection />
         <VideoSection />
         <NewsFeatureSection />

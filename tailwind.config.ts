@@ -25,11 +25,22 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        divine: {
+          dark: "#0a0118", // Deep cosmic purple-black
+          gold: "#FFD700", // Pure divine gold
+          celestial: "#4A90E2", // Heavenly blue
+          purple: "#8A2BE2", // Divine purple
+          rose: "#FF69B4", // Celestial rose
+          white: "#FFFFFF", // Pure divine white
+          silver: "#C0C0C0", // Ethereal silver
+          cosmic: "#1a0a2e", // Deep cosmic background
+          ethereal: "#16213e", // Ethereal blue-purple
+        },
         cyberpunk: {
-          dark: "#000000", // Changed to pure black for space theme
-          blue: "#1EAEDB",
-          pink: "#FF1B6B",
-          cyan: "#45CAFF",
+          dark: "#0a0118",
+          blue: "#4A90E2",
+          pink: "#FF69B4",
+          cyan: "#00FFFF",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -70,12 +81,49 @@ export default {
           to: { height: "0" },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '0%, 100%': { transform: 'translateY(0) scale(1)' },
+          '50%': { transform: 'translateY(-30px) scale(1.05)' },
         },
         glow: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.5' },
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6), 0 0 60px rgba(255, 215, 0, 0.4)' },
+          '50%': { opacity: '0.8', boxShadow: '0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.8), 0 0 90px rgba(255, 215, 0, 0.6)' },
+        },
+        'divine-pulse': {
+          '0%, 100%': { 
+            transform: 'scale(1)',
+            boxShadow: '0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(138, 43, 226, 0.3), 0 0 60px rgba(74, 144, 226, 0.2)'
+          },
+          '50%': { 
+            transform: 'scale(1.05)',
+            boxShadow: '0 0 40px rgba(255, 215, 0, 0.8), 0 0 80px rgba(138, 43, 226, 0.6), 0 0 120px rgba(74, 144, 226, 0.4)'
+          },
+        },
+        'divine-shimmer': {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'celestial-rotate': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'holy-float': {
+          '0%, 100%': { 
+            transform: 'translateY(0) translateX(0) rotate(0deg)',
+            opacity: '0.8'
+          },
+          '33%': { 
+            transform: 'translateY(-20px) translateX(10px) rotate(2deg)',
+            opacity: '1'
+          },
+          '66%': { 
+            transform: 'translateY(-10px) translateX(-5px) rotate(-1deg)',
+            opacity: '0.9'
+          },
+        },
+        'divine-gradient': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
         ping: {
           '75%, 100%': {
@@ -87,8 +135,13 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite",
+        "float": "float 8s ease-in-out infinite",
+        "glow": "glow 3s ease-in-out infinite",
+        "divine-pulse": "divine-pulse 4s ease-in-out infinite",
+        "divine-shimmer": "divine-shimmer 3s linear infinite",
+        "celestial-rotate": "celestial-rotate 20s linear infinite",
+        "holy-float": "holy-float 12s ease-in-out infinite",
+        "divine-gradient": "divine-gradient 8s ease infinite",
         "ping": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       backdropBlur: {
@@ -101,6 +154,10 @@ export default {
         'wide': '0.025em',
         'wider': '0.05em',
         'widest': '0.1em',
+      },
+      backgroundSize: {
+        '300%': '300%',
+        '400%': '400%',
       },
     },
   },

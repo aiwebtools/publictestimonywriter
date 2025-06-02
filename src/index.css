@@ -41,8 +41,11 @@
   }
   
   body {
-    @apply bg-cyberpunk-dark text-foreground font-sans antialiased;
+    @apply bg-divine-dark text-foreground font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(135deg, #0a0118 0%, #1a0a2e 25%, #16213e 50%, #0a0118 75%, #1a0a2e 100%);
+    background-size: 400% 400%;
+    animation: divine-gradient 15s ease infinite;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -59,30 +62,88 @@
 }
 
 .glass {
-  @apply backdrop-blur-lg bg-white/10 border border-white/20;
+  @apply backdrop-blur-2xl bg-gradient-to-br from-divine-white/10 via-divine-gold/5 to-divine-purple/10 border border-divine-gold/30;
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.2),
+    0 0 40px rgba(138, 43, 226, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.divine-glass {
+  @apply backdrop-blur-3xl bg-gradient-to-br from-divine-gold/20 via-divine-purple/15 to-divine-celestial/10 border-2 border-divine-gold/50;
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.4),
+    0 0 60px rgba(138, 43, 226, 0.2),
+    0 0 90px rgba(74, 144, 226, 0.1),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.divine-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+  animation: divine-shimmer 4s infinite;
 }
 
 .neon-glow {
-  text-shadow: 0 0 10px rgba(69, 202, 255, 0.5),
-               0 0 20px rgba(69, 202, 255, 0.3),
-               0 0 30px rgba(69, 202, 255, 0.1);
-  @apply tracking-tight;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.4),
+    0 0 40px rgba(138, 43, 226, 0.3),
+    0 0 50px rgba(74, 144, 226, 0.2);
+  @apply tracking-tight text-divine-gold;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.divine-neon-glow {
+  text-shadow: 
+    0 0 15px rgba(255, 215, 0, 1),
+    0 0 30px rgba(255, 215, 0, 0.8),
+    0 0 45px rgba(255, 215, 0, 0.6),
+    0 0 60px rgba(138, 43, 226, 0.5),
+    0 0 75px rgba(74, 144, 226, 0.3),
+    0 0 90px rgba(255, 255, 255, 0.2);
+  @apply tracking-tight text-divine-gold;
+  animation: divine-pulse 4s ease-in-out infinite;
 }
 
 .text-shadow-glow {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-               0 0 20px rgba(69, 202, 255, 0.6),
-               0 0 30px rgba(255, 27, 107, 0.4);
+  text-shadow: 
+    0 0 15px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 215, 0, 0.8),
+    0 0 45px rgba(138, 43, 226, 0.6),
+    0 0 60px rgba(74, 144, 226, 0.4);
 }
 
 .cyberpunk-card {
-  @apply glass rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-white/15;
+  @apply divine-glass rounded-2xl p-8 transition-all duration-500 hover:scale-110;
+  animation: holy-float 12s ease-in-out infinite;
+}
+
+.cyberpunk-card:hover {
+  @apply bg-gradient-to-br from-divine-gold/30 via-divine-purple/20 to-divine-celestial/15;
+  box-shadow: 
+    0 0 40px rgba(255, 215, 0, 0.6),
+    0 0 80px rgba(138, 43, 226, 0.4),
+    0 0 120px rgba(74, 144, 226, 0.2);
 }
 
 .cyberpunk-button {
-  @apply px-6 py-3 rounded-full bg-gradient-to-r from-cyberpunk-pink to-cyberpunk-blue 
-         text-white font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg 
-         hover:shadow-cyberpunk-blue/20 tracking-wide;
+  @apply px-8 py-6 rounded-2xl bg-gradient-to-r from-divine-gold via-divine-purple to-divine-celestial
+         text-divine-dark font-bold transition-all duration-500 hover:scale-110 
+         tracking-wide relative overflow-hidden;
+  background-size: 300% 300%;
+  animation: divine-gradient 6s ease infinite, divine-pulse 4s ease-in-out infinite;
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.5),
+    0 0 60px rgba(138, 43, 226, 0.3),
+    0 0 90px rgba(74, 144, 226, 0.2);
   white-space: normal;
   word-wrap: break-word;
   text-align: center;
@@ -90,10 +151,31 @@
   min-height: fit-content;
 }
 
-/* Mobile-specific adjustments for cyberpunk buttons */
+.cyberpunk-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: divine-shimmer 3s infinite;
+}
+
+.cyberpunk-button:hover {
+  text-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 
+    0 0 50px rgba(255, 215, 0, 0.8),
+    0 0 100px rgba(138, 43, 226, 0.6),
+    0 0 150px rgba(74, 144, 226, 0.4);
+}
+
+/* Mobile-specific adjustments for divine buttons */
 @media (max-width: 768px) {
   .cyberpunk-button {
-    @apply px-4 py-4 text-sm;
+    @apply px-6 py-5 text-sm;
     white-space: normal;
     word-wrap: break-word;
     hyphens: auto;
@@ -105,8 +187,75 @@
 /* Extra small mobile adjustments */
 @media (max-width: 480px) {
   .cyberpunk-button {
-    @apply px-3 py-3 text-xs;
+    @apply px-4 py-4 text-xs;
     line-height: 1.4;
     max-width: 85vw;
   }
+}
+
+/* Divine particle effects */
+.divine-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.divine-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0.2) 50%, transparent 100%);
+  border-radius: 50%;
+  animation: holy-float 15s infinite linear;
+}
+
+/* Divine light rays */
+.divine-rays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, 
+    transparent 0%, 
+    rgba(255, 215, 0, 0.05) 25%, 
+    rgba(138, 43, 226, 0.03) 50%, 
+    rgba(74, 144, 226, 0.02) 75%, 
+    transparent 100%);
+  animation: divine-pulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Enhanced hover effects for divine elements */
+.divine-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.divine-hover:hover {
+  transform: translateY(-10px) scale(1.05);
+  filter: brightness(1.2) saturate(1.3);
+}
+
+/* Divine scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 1, 24, 0.8);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #FFD700, #8A2BE2, #4A90E2);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #4A90E2, #8A2BE2, #FFD700);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
