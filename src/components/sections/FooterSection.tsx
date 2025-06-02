@@ -21,6 +21,9 @@ const FooterSection = () => {
               </span>
               {" "}- For The People, By the People
             </p>
+            <p className="text-xs text-gray-400 mt-2">
+              Informational, educational, and research purposes only.
+            </p>
           </div>
         </div>
 
@@ -33,7 +36,7 @@ const FooterSection = () => {
           <div>
             <h3 className="font-bold mb-4">Legal</h3>
             <a href="https://openai.com/policies/privacy-policy" className="block text-gray-300 hover:text-white">Privacy Policy</a>
-            <a href="https://aiwebtools.ai/terms-of-services" className="block text-gray-300 hover:text-white">Terms of Service</a>
+            <a href="https://aiwebtools.lovable.app/disclaimers" className="block text-gray-300 hover:text-white">Terms of Service</a>
           </div>
           <div>
             <h3 className="font-bold mb-4">Tools</h3>

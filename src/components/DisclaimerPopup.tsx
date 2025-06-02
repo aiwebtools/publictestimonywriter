@@ -44,6 +44,9 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
             By using this tool, you acknowledge that all submitted testimonies represent your own personal views and opinions. 
             We do not guarantee specific outcomes from testimony submissions.
           </p>
+          <p className="text-sm text-gray-400 italic">
+            For informational, educational, and research purposes only.
+          </p>
           <p>
             Our tool has been featured in news articles: 
           </p>
@@ -69,6 +72,18 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
               </a>
             </li>
           </ul>
+          <p className="text-sm">
+            By continuing, you agree to our{" "}
+            <a 
+              href="https://aiwebtools.lovable.app/disclaimers" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-cyberpunk-blue hover:underline"
+            >
+              Terms of Service
+            </a>
+            .
+          </p>
         </div>
         
         <div className="flex flex-col">
