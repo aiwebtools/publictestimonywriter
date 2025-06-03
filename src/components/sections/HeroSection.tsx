@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="pt-20 pb-32 relative">
+    <section className="pt-20 pb-32 relative" itemScope itemType="https://schema.org/SoftwareApplication">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto text-center space-y-12">
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 animate-float divine-neon-glow leading-tight">
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 animate-float divine-neon-glow leading-tight" itemProp="name">
             Public Testimony Writer GPT
           </h1>
-          <p className="text-2xl md:text-3xl mb-12 text-divine-silver leading-relaxed max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl mb-12 text-divine-silver leading-relaxed max-w-4xl mx-auto" itemProp="description">
             Craft Powerful, Human-Centered Testimonies That Leave a Legacy.
-            Turn your ideas into impactful public statements that move hearts, influence policy, and echo for generations.
+            Turn your ideas into impactful public statements that move hearts, influence policy, and echo for generations with our free AI tools.
             <span className="block mt-6 text-divine-gold font-semibold divine-neon-glow">
               Your Voice. Your Words. Our Future. — WE THE PEOPLE
             </span>
-          </p>
+          </h2>
           <div className="flex flex-col md:flex-row justify-center gap-8 items-center">
             <Button
               className="px-8 py-8 md:px-16 md:py-8 text-lg md:text-2xl font-bold rounded-3xl 
@@ -25,6 +25,7 @@ const HeroSection = () => {
                          divine-hover max-w-[90vw] whitespace-normal text-center leading-tight
                          animate-divine-pulse"
               onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
+              aria-label="Access Free AI Public Testimony Writer Tool"
             >
               <span className="relative z-10 font-extrabold tracking-wide">
                 <span className="hidden md:inline">WRITE YOUR PUBLIC TESTIMONY - LET YOUR VOICE BE HEARD</span>
@@ -38,9 +39,17 @@ const HeroSection = () => {
                          px-8 py-6 text-lg rounded-2xl font-semibold divine-hover
                          hover:shadow-lg hover:shadow-divine-gold/30 transition-all duration-500"
               onClick={() => window.location.href = "#how-it-works"}
+              aria-label="Learn how our AI tools work"
             >
               Learn How It Works
             </Button>
+          </div>
+          
+          {/* SEO-friendly keywords section */}
+          <div className="sr-only">
+            AI tools, free AI tools, AI web tools, public testimony writer, GPT tools, artificial intelligence tools, 
+            civic engagement AI, legislation writer, AI testimony generator, ChatGPT tools, free GPT tools, 
+            AI writing tools, public speaking AI, government testimony AI, civic participation tools
           </div>
           
           {/* Particle effects */}
