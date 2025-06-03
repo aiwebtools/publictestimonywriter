@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -62,12 +63,16 @@
 
 /* Optimized glass effects */
 .glass {
-  @apply backdrop-blur-md bg-gradient-to-br from-divine-white/8 via-divine-gold/4 to-divine-purple/8 border border-divine-gold/25;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 215, 0, 0.04), rgba(138, 43, 226, 0.05));
+  border: 1px solid rgba(255, 215, 0, 0.25);
   box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
 }
 
 .divine-glass {
-  @apply backdrop-blur-lg bg-gradient-to-br from-divine-gold/15 via-divine-purple/10 to-divine-celestial/8 border border-divine-gold/40;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(138, 43, 226, 0.10), rgba(74, 144, 226, 0.08));
+  border: 1px solid rgba(255, 215, 0, 0.40);
   box-shadow: 0 8px 32px rgba(255, 215, 0, 0.25);
   position: relative;
 }
@@ -109,12 +114,17 @@
 
 /* Optimized card effects */
 .cyberpunk-card {
-  @apply divine-glass rounded-2xl p-8 transition-all duration-300 hover:scale-105;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(138, 43, 226, 0.10), rgba(74, 144, 226, 0.08));
+  border: 1px solid rgba(255, 215, 0, 0.40);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.25);
+  position: relative;
+  @apply rounded-2xl p-8 transition-all duration-300 hover:scale-105;
   will-change: transform;
 }
 
 .cyberpunk-card:hover {
-  @apply bg-gradient-to-br from-divine-gold/25 via-divine-purple/15 to-divine-celestial/12;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(138, 43, 226, 0.15), rgba(74, 144, 226, 0.12));
   box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
 }
 
@@ -190,3 +200,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #4A90E2, #FFD700);
 }
+
