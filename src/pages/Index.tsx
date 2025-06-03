@@ -15,7 +15,7 @@ const Index = () => {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   useEffect(() => {
-    document.title = "Free AI Tools | Public Testimony Writer GPT | AI Web Tools";
+    document.title = "Free AI Tools | AI Web Tools | Public Testimony Writer GPT";
     
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -38,8 +38,8 @@ const Index = () => {
     <div className="min-h-screen bg-divine-dark text-divine-white relative overflow-x-hidden">
       <StarField />
       
-      {/* Divine background overlay */}
-      <div className="fixed inset-0 bg-gradient-to-br from-divine-gold/5 via-divine-purple/3 to-divine-celestial/5 pointer-events-none -z-5" />
+      {/* Simplified background overlay */}
+      <div className="fixed inset-0 bg-gradient-to-br from-divine-gold/3 via-divine-purple/2 to-divine-celestial/3 pointer-events-none -z-5" />
       
       {/* Skip to main content for accessibility */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-divine-gold text-divine-dark px-4 py-2 rounded z-50">
@@ -51,8 +51,8 @@ const Index = () => {
       {/* Disclaimer Popup */}
       {showDisclaimer && <DisclaimerPopup onAccept={handleDisclaimerAccept} />}
       
-      {/* Main content with divine spacing */}
-      <main id="main-content" className="pt-48 md:pt-40 space-y-32">
+      {/* Main content with optimized spacing */}
+      <main id="main-content" className="pt-48 md:pt-40 space-y-24">
         <HeroSection />
         <VideoSection />
         <NewsFeatureSection />
