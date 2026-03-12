@@ -82,7 +82,7 @@ const Header = () => {
             </Button>
             <Button
               className="cyberpunk-button text-sm px-4 py-2"
-              onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+              onClick={() => window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools"}
             >
               More AI Tools
             </Button>
