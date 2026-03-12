@@ -44,7 +44,7 @@ const Header = () => {
                 Presented by{" "}
                 <span 
                   className="text-cyberpunk-blue hover:text-cyberpunk-pink cursor-pointer transition-colors duration-200 underline"
-                  onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+                  onClick={() => window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools"}
                 >
                   AiWebTools
                 </span>
