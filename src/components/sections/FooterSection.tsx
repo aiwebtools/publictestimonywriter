@@ -15,7 +15,7 @@ const FooterSection = () => {
               Presented by{" "}
               <span 
                 className="text-divine-celestial hover:text-divine-gold cursor-pointer transition-colors duration-300 underline font-semibold divine-hover"
-                onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+                onClick={() => window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools"}
                 itemProp="url"
               >
                 AiWebTools.ai
