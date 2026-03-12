@@ -25,15 +25,15 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm">
-      <div className="divine-glass max-w-4xl w-full m-6 p-10 rounded-3xl relative divine-hover">
+      <div className="divine-glass max-w-md w-full m-4 p-5 rounded-2xl relative">
         <button 
           onClick={() => setIsVisible(false)} 
-          className="absolute top-6 right-6 text-divine-silver hover:text-divine-gold transition-colors duration-300 divine-hover"
+          className="absolute top-3 right-3 text-divine-silver hover:text-divine-gold transition-colors duration-300"
         >
-          <X size={28} />
+          <X size={18} />
         </button>
         
-        <h2 className="text-4xl font-bold mb-8 divine-neon-glow text-center">Legal Disclaimer</h2>
+        <h2 className="text-xl font-bold mb-3 divine-neon-glow text-center">Legal Disclaimer</h2>
         
         <div className="mb-10 text-divine-silver space-y-6 max-h-[60vh] overflow-y-auto pr-4 text-lg leading-relaxed">
           <p>
