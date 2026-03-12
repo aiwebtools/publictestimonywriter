@@ -25,77 +25,55 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm">
-      <div className="divine-glass max-w-4xl w-full m-6 p-10 rounded-3xl relative divine-hover">
+      <div className="divine-glass max-w-md w-full m-4 p-5 rounded-2xl relative">
         <button 
           onClick={() => setIsVisible(false)} 
-          className="absolute top-6 right-6 text-divine-silver hover:text-divine-gold transition-colors duration-300 divine-hover"
+          className="absolute top-3 right-3 text-divine-silver hover:text-divine-gold transition-colors duration-300"
         >
-          <X size={28} />
+          <X size={18} />
         </button>
         
-        <h2 className="text-4xl font-bold mb-8 divine-neon-glow text-center">Legal Disclaimer</h2>
+        <h2 className="text-xl font-bold mb-3 divine-neon-glow text-center">Legal Disclaimer</h2>
         
-        <div className="mb-10 text-divine-silver space-y-6 max-h-[60vh] overflow-y-auto pr-4 text-lg leading-relaxed">
+        <div className="mb-4 text-divine-silver space-y-2 max-h-[40vh] overflow-y-auto pr-2 text-xs leading-relaxed">
           <p>
-            This tool is designed to assist in crafting public testimonies while maintaining the authenticity of your voice and message. 
-            Users are responsible for reviewing and ensuring the accuracy of all content before submission.
+            This tool assists in crafting public testimonies. Users are responsible for reviewing all content before submission.
           </p>
           <p>
-            By using this tool, you acknowledge that all submitted testimonies represent your own personal views and opinions. 
-            We do not guarantee specific outcomes from testimony submissions.
+            All submitted testimonies represent your own personal views. We do not guarantee specific outcomes.
           </p>
-          <p className="text-divine-gold font-semibold italic text-xl text-center neon-glow">
+          <p className="text-divine-gold font-semibold italic text-sm text-center neon-glow">
             For informational, educational, and research purposes only.
           </p>
-          <p className="text-xl font-semibold text-divine-celestial">
-            Our tool has been featured in news articles: 
-          </p>
-          <ul className="list-disc pl-8 space-y-4">
+          <p className="text-sm font-semibold text-divine-celestial">Featured in:</p>
+          <ul className="list-disc pl-5 space-y-1">
             <li>
-              <a 
-                href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-divine-gold hover:divine-neon-glow transition-all duration-300 divine-hover"
-              >
-                Dabbin Dad News - CT CBD Shop Owner's New AI Tool Makes Public Testimony Easier: A Brave New World
+              <a href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" target="_blank" rel="noopener noreferrer" className="text-divine-gold hover:underline">
+                Dabbin Dad News
               </a>
             </li>
             <li>
-              <a 
-                href="https://www.ctinsider.com/connecticut/article/chat-gpt-ai-connecticut-testimony-legislature-18690805.php" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-divine-celestial hover:divine-neon-glow transition-all duration-300 divine-hover"
-              >
-                CT Insider - How AI is helping people testify at the Connecticut Legislature
+              <a href="https://www.ctinsider.com/connecticut/article/chat-gpt-ai-connecticut-testimony-legislature-18690805.php" target="_blank" rel="noopener noreferrer" className="text-divine-celestial hover:underline">
+                CT Insider
               </a>
             </li>
           </ul>
-          <p className="text-lg text-center">
+          <p className="text-xs text-center">
             By continuing, you agree to our{" "}
-            <a 
-              href="https://aiwebtools.lovable.app/disclaimers" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-divine-gold hover:divine-neon-glow transition-all duration-300 divine-hover underline font-semibold"
-            >
+            <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-divine-gold underline font-semibold">
               Terms of Service
-            </a>
-            .
+            </a>.
           </p>
         </div>
         
-        <div className="flex flex-col items-center space-y-6">
+        <div className="flex flex-col items-center space-y-3">
           <Button 
-            className="cyberpunk-button py-6 text-2xl font-extrabold tracking-wider w-full max-w-md"
+            className="cyberpunk-button py-3 text-sm font-bold tracking-wider w-full max-w-xs"
             onClick={handleAccept}
           >
-            <span className="relative z-10 inline-flex items-center">
-              <span className="animate-glow">I ACCEPT</span>
-            </span>
+            <span className="relative z-10">I ACCEPT</span>
           </Button>
-          <div className="h-1 w-full bg-gradient-to-r from-divine-celestial via-divine-gold to-divine-purple rounded-full animate-divine-gradient" />
+          <div className="h-0.5 w-full bg-gradient-to-r from-divine-celestial via-divine-gold to-divine-purple rounded-full" />
         </div>
       </div>
     </div>
