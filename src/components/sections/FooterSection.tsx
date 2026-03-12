@@ -15,7 +15,7 @@ const FooterSection = () => {
               Presented by{" "}
               <span 
                 className="text-divine-celestial hover:text-divine-gold cursor-pointer transition-colors duration-300 underline font-semibold divine-hover"
-                onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+                onClick={() => window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools"}
                 itemProp="url"
               >
                 AiWebTools.ai
@@ -83,7 +83,7 @@ const FooterSection = () => {
           <div className="space-y-6">
             <Button
               className="cyberpunk-button w-full text-lg py-6"
-              onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+              onClick={() => window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools"}
               aria-label="Discover More Free AI Tools"
             >
               More Free AI Tools
@@ -91,7 +91,7 @@ const FooterSection = () => {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-divine-gold/30 text-center">
-          <a href="https://www.aiwebtools.ai" className="text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover" itemProp="copyrightHolder">
+          <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover" itemProp="copyrightHolder">
             © 2025 AI WEB TOOLS LLC All rights reserved.
           </a>
         </div>

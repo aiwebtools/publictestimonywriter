@@ -1,99 +1,80 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const AIWEBTOOLS_URL = "https://aiwebtools.lovable.app/?via=aiwebtools";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close menu when clicking anchor links
+  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
+
   useEffect(() => {
-    const handleHashChange = () => {
-      setIsMenuOpen(false);
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    
-    // Also prevent body scroll when menu is open
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
+    window.addEventListener('hashchange', closeMenu);
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('hashchange', closeMenu);
       document.body.style.overflow = '';
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, closeMenu]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const goTo = (url: string) => {
+    closeMenu();
+    window.location.href = url;
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass">
-      <div className="container mx-auto px-4 py-4">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex flex-col">
-              <h1 className="text-lg md:text-xl font-bold text-white neon-glow tracking-tight">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-divine-gold/20">
+      <div className="container mx-auto px-3 sm:px-4 py-3">
+        <nav className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1">
+            <div className="flex flex-col min-w-0">
+              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-divine-gold truncate">
                 PUBLIC ACTIVISM AI TOOLS
               </h1>
-              <p className="text-xs md:text-sm text-gray-300 leading-tight">
+              <p className="text-[10px] sm:text-xs md:text-sm text-divine-silver leading-tight truncate">
                 Presented by{" "}
-                <span 
-                  className="text-cyberpunk-blue hover:text-cyberpunk-pink cursor-pointer transition-colors duration-200 underline"
-                  onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+                <span
+                  className="text-divine-celestial hover:text-divine-gold cursor-pointer transition-colors duration-200 underline"
+                  onClick={() => goTo(AIWEBTOOLS_URL)}
                 >
-                  AiWebTools
+                  AiWebTools.ai
                 </span>
-                {" "}- For The People, By the People
+                <span className="hidden sm:inline"> - For The People, By the People</span>
               </p>
             </div>
             <Button
-              className="cyberpunk-button text-xs sm:text-sm px-2 sm:px-4 py-2"
-              onClick={() => window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt"}
+              className="cyberpunk-button text-[10px] sm:text-xs px-2 sm:px-3 py-1.5 sm:py-2 shrink-0 hidden xs:flex"
+              onClick={() => goTo("https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt")}
             >
               <span className="hidden sm:inline">Public Testimony Writer GPT</span>
               <span className="sm:hidden">Write Testimony</span>
             </Button>
           </div>
-          
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button
-              className="cyberpunk-button text-sm px-4 py-2"
-              onClick={() => window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt"}
-            >
-              Humanized Special Version ✨
-            </Button>
-            <Button
-              className="cyberpunk-button text-sm px-4 py-2"
-              onClick={() => window.location.href = "https://legislatorlink.lovable.app/"}
-            >
-              Contact Local Lawmakers
-            </Button>
-            <Button
-              className="cyberpunk-button text-sm px-4 py-2"
-              onClick={() => window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools"}
-            >
-              WRITE YOUR OWN LAWS
-            </Button>
-            <Button
-              className="cyberpunk-button text-sm px-4 py-2"
-              onClick={() => window.location.href = "https://www.aiwebtools.ai"}
-            >
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+            <NavButton onClick={() => goTo("https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt")}>
+              Humanized Version ✨
+            </NavButton>
+            <NavButton onClick={() => goTo("https://legislatorlink.lovable.app/")}>
+              Contact Lawmakers
+            </NavButton>
+            <NavButton onClick={() => goTo("https://legislationwritergpt.lovable.app/?via=aiwebtools")}>
+              Write Your Own Laws
+            </NavButton>
+            <NavButton onClick={() => goTo(AIWEBTOOLS_URL)}>
               More AI Tools
-            </Button>
+            </NavButton>
             <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#disclaimer">Disclaimer</NavLink>
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            onClick={toggleMenu}
-            className="md:hidden p-2 text-white hover:text-cyberpunk-blue z-50 relative"
+          <button
+            onClick={() => setIsMenuOpen(prev => !prev)}
+            className="lg:hidden p-2 text-divine-gold active:scale-90 transition-transform duration-100 z-50 relative touch-manipulation"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
           >
@@ -103,68 +84,32 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className={cn(
-        "fixed inset-x-0 top-0 z-40 bg-black/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out md:hidden",
-        isMenuOpen ? "translate-y-0" : "-translate-y-full"
-      )}>
-        <div className="pt-20 pb-6 px-4">
-          <nav className="flex flex-col space-y-3">
-            <Button
-              className="cyberpunk-button w-full text-xs py-2 px-3"
-              onClick={() => {
-                window.location.href = "https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt";
-                setIsMenuOpen(false);
-              }}
-            >
+      <div
+        className={cn(
+          "fixed inset-0 top-0 z-40 bg-black/98 backdrop-blur-lg lg:hidden",
+          "transition-opacity duration-200 ease-out",
+          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+      >
+        <div className="pt-20 pb-6 px-4 h-full overflow-y-auto">
+          <nav className="flex flex-col gap-2 max-w-md mx-auto">
+            <MobileButton onClick={() => goTo("https://chatgpt.com/g/g-HEYmgtIzH-testimony-writer-gpt")}>
               Public Testimony Writer GPT
-            </Button>
-            
-            <Button
-              className="cyberpunk-button w-full text-xs py-2 px-3"
-              onClick={() => {
-                window.location.href = "https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt";
-                setIsMenuOpen(false);
-              }}
-            >
+            </MobileButton>
+            <MobileButton onClick={() => goTo("https://chatgpt.com/g/g-67531f0471b081919c8dd6f6c0ab8fbc-alex-the-human-public-testimony-writer-gpt")}>
               Humanized Special Version ✨
-            </Button>
-            
-            <Button
-              className="cyberpunk-button w-full text-xs py-2 px-3"
-              onClick={() => {
-                window.location.href = "https://legislatorlink.lovable.app/";
-                setIsMenuOpen(false);
-              }}
-            >
+            </MobileButton>
+            <MobileButton onClick={() => goTo("https://legislatorlink.lovable.app/")}>
               Contact Local Lawmakers
-            </Button>
-            
-            <Button
-              className="cyberpunk-button w-full text-xs py-2 px-3"
-              onClick={() => {
-                window.location.href = "https://legislationwritergpt.lovable.app/?via=aiwebtools";
-                setIsMenuOpen(false);
-              }}
-            >
+            </MobileButton>
+            <MobileButton onClick={() => goTo("https://legislationwritergpt.lovable.app/?via=aiwebtools")}>
               Write Your Own Laws
-            </Button>
-            
-            <Button
-              className="cyberpunk-button w-full text-xs py-2 px-3"
-              onClick={() => {
-                window.location.href = "https://www.aiwebtools.ai";
-                setIsMenuOpen(false);
-              }}
-            >
+            </MobileButton>
+            <MobileButton onClick={() => goTo(AIWEBTOOLS_URL)}>
               More AI Tools
-            </Button>
-            
-            <MobileNavLink href="#faq" onClick={() => setIsMenuOpen(false)}>
-              FAQ
-            </MobileNavLink>
-            <MobileNavLink href="#disclaimer" onClick={() => setIsMenuOpen(false)}>
-              Disclaimer
-            </MobileNavLink>
+            </MobileButton>
+            <MobileNavLink href="#faq" onClick={closeMenu}>FAQ</MobileNavLink>
+            <MobileNavLink href="#disclaimer" onClick={closeMenu}>Disclaimer</MobileNavLink>
           </nav>
         </div>
       </div>
@@ -172,28 +117,46 @@ const Header = () => {
   );
 };
 
+const NavButton = ({ onClick, children }: { onClick: () => void; children: React.ReactNode }) => (
+  <Button
+    className="cyberpunk-button text-xs px-3 py-1.5"
+    onClick={onClick}
+  >
+    {children}
+  </Button>
+);
+
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
     href={href}
-    className="text-gray-300 hover:text-white transition-colors duration-200 font-medium tracking-wide"
+    className="text-divine-silver hover:text-divine-gold transition-colors duration-200 font-medium text-sm"
   >
     {children}
   </a>
 );
 
-const MobileNavLink = ({ 
-  href, 
-  children, 
-  onClick 
-}: { 
-  href: string; 
+const MobileButton = ({ onClick, children }: { onClick: () => void; children: React.ReactNode }) => (
+  <Button
+    className="cyberpunk-button w-full text-sm py-3 px-4 touch-manipulation active:scale-95 transition-transform duration-100"
+    onClick={onClick}
+  >
+    {children}
+  </Button>
+);
+
+const MobileNavLink = ({
+  href,
+  children,
+  onClick,
+}: {
+  href: string;
   children: React.ReactNode;
   onClick?: () => void;
 }) => (
   <a
     href={href}
     onClick={onClick}
-    className="text-lg text-gray-300 hover:text-white transition-colors duration-200 py-2 border-b border-gray-700/50 font-medium tracking-wide"
+    className="text-lg text-divine-silver hover:text-divine-gold transition-colors duration-200 py-3 border-b border-divine-gold/20 font-medium touch-manipulation"
   >
     {children}
   </a>
