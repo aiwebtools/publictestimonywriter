@@ -33,19 +33,19 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
           <X size={18} />
         </button>
         
-        <h2 className="text-xl font-bold mb-3 divine-neon-glow text-center">Legal Disclaimer</h2>
+        <h2 className="text-lg font-medium mb-3 divine-neon-glow text-center">Legal Disclaimer</h2>
         
-        <div className="mb-4 text-divine-silver space-y-2 max-h-[40vh] overflow-y-auto pr-2 text-xs leading-relaxed">
+        <div className="mb-4 text-divine-silver space-y-2 max-h-[40vh] overflow-y-auto pr-2 text-[13px] leading-relaxed font-light">
           <p>
             This tool assists in crafting public testimonies. Users are responsible for reviewing all content before submission.
           </p>
           <p>
             All submitted testimonies represent your own personal views. We do not guarantee specific outcomes.
           </p>
-          <p className="text-divine-gold font-semibold italic text-sm text-center neon-glow">
+          <p className="text-divine-gold font-normal italic text-[13px] text-center neon-glow">
             For informational, educational, and research purposes only.
           </p>
-          <p className="text-sm font-semibold text-divine-celestial">Featured in:</p>
+          <p className="text-[13px] font-medium text-divine-celestial">Featured in:</p>
           <ul className="list-disc pl-5 space-y-1">
             <li>
               <a href="https://dabbin-dad.com/in-the-news/ct-cbd-shop-owners-new-ai-tool-makes-public-testimony-easier-a-brave-new-world/" target="_blank" rel="noopener noreferrer" className="text-divine-gold hover:underline">
@@ -58,9 +58,9 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
               </a>
             </li>
           </ul>
-          <p className="text-xs text-center">
+          <p className="text-[12px] text-center font-light">
             By continuing, you agree to our{" "}
-            <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-divine-gold underline font-semibold">
+            <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-divine-gold underline font-normal">
               Terms of Service
             </a>.
           </p>
@@ -68,7 +68,7 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
         
         <div className="flex flex-col items-center space-y-3">
           <Button 
-            className="cyberpunk-button py-3 text-sm font-bold tracking-wider w-full max-w-xs"
+            className="cyberpunk-button py-2.5 text-sm font-semibold tracking-wide w-full max-w-xs"
             onClick={handleAccept}
           >
             <span className="relative z-10">I ACCEPT</span>
