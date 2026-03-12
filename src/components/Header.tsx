@@ -152,7 +152,7 @@ const Header = () => {
             <Button
               className="cyberpunk-button w-full text-xs py-2 px-3"
               onClick={() => {
-                window.location.href = "https://www.aiwebtools.ai";
+                window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools";
                 setIsMenuOpen(false);
               }}
             >

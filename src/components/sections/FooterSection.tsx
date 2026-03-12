@@ -91,7 +91,7 @@ const FooterSection = () => {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-divine-gold/30 text-center">
-          <a href="https://www.aiwebtools.ai" className="text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover" itemProp="copyrightHolder">
+          <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="text-divine-silver hover:text-divine-gold transition-colors duration-300 text-lg divine-hover" itemProp="copyrightHolder">
             © 2025 AI WEB TOOLS LLC All rights reserved.
           </a>
         </div>
