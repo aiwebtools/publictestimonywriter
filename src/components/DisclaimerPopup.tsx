@@ -15,10 +15,6 @@ const DisclaimerPopup = ({ onAccept }: DisclaimerPopupProps) => {
     localStorage.setItem("disclaimer-accepted", "true");
     setIsVisible(false);
     onAccept();
-    toast({
-      title: "Welcome!",
-      description: "Thank you for accepting the disclaimer. Your voice matters.",
-    });
   };
 
   if (!isVisible) return null;
