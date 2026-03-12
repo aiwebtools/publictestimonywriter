@@ -83,7 +83,7 @@ const FooterSection = () => {
           <div className="space-y-6">
             <Button
               className="cyberpunk-button w-full text-lg py-6"
-              onClick={() => window.location.href = "https://www.aiwebtools.ai"}
+              onClick={() => window.location.href = "https://aiwebtools.lovable.app/?via=aiwebtools"}
               aria-label="Discover More Free AI Tools"
             >
               More Free AI Tools
